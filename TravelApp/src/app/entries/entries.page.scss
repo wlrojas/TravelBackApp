@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap');
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+ion-content {
+  --background: url('/assets/img/travel-background.jpg') no-repeat center center fixed;
+  --background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 16px;
+}
+
+.logo-toolbar {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+ion-toolbar {
+  --background: #2E7D32;
+  --color: #ffffff;
+  font-family: 'Pacifico', cursive;
+}
+
+ion-title {
+  display: flex;
+  align-items: center;
+}
+
+.add-entry-button,
+.random-memory-button {
+  --background: #FF9800;
+  --background-hover: #FB8C00;
+  --background-activated: #FF9800;
+  --border-radius: 20px;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.cards-background {
+  background: url('/assets/img/leaf-background.jpg') repeat;
+  background-size: contain;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.custom-list {
+  --background: transparent !important;
+}
+
+ion-item {
+  --background: rgba(255, 255, 255, 0.9) !important;
+  --border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  --ion-item-background-hover: rgba(255, 255, 255, 0.8) !important;
+  --ion-item-background-activated: rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-thumbnail img {
+  border-radius: 10px;
+}
+
+ion-label {
+  color: #2E7D32 !important;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+ion-label h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #2E7D32 !important;
+}
+
+ion-label p {
+  margin: 0;
+  color: #555 !important;
+}

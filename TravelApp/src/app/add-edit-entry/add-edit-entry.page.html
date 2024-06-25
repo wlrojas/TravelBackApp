@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/entries"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="/assets/img/logo.png" alt="Logo" class="logo-toolbar">
+      Añade tu recuerdo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-wrapper">
+    <form (ngSubmit)="saveEntry()">
+      <ion-item>
+        <ion-label position="floating">Nombre para este recuerdo</ion-label>
+        <ion-input [(ngModel)]="entry.title" name="title" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">¿Qué nota quiero agregar?</ion-label>
+        <ion-textarea [(ngModel)]="entry.content" name="content" required></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Agrega la foto</ion-label>
+        <ion-button (click)="takePicture()" fill="clear">
+          <img src="assets/icon/camera.svg" alt="Camera" class="camera-icon">
+        </ion-button>
+        <ion-thumbnail *ngIf="entry.photo">
+          <img [src]="entry.photo">
+        </ion-thumbnail>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ubicación</ion-label>
+        <ion-input [(ngModel)]="entry.location" name="location"></ion-input>
+        <ion-button expand="block" (click)="getCurrentLocation()">O usa tus coordenadas</ion-button>
+      </ion-item>
+      <ion-button expand="block" type="submit" class="save-entry-button">Guardar mi recuerdo</ion-button>
+    </form>
+  </div>
+</ion-content>
