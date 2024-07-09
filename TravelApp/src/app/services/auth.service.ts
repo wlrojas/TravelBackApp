@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { FingerPrintAuth } from 'capacitor-fingerprint-auth'
 
 @Injectable({
   providedIn: 'root'
