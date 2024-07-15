@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap');
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
+
+.background-image {
+  background: url('/assets/img/travel-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.welcome-title {
+  font-family: 'Pacifico', cursive;
+  color: #2E7D32;
+}
+
+.welcome-content {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.start-button {
+  --background: #2E7D32;
+  --background-hover: #1B5E20;
+  --background-activated: #2E7D32;
+  --border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.random-button {
+  --background: #FF9800;
+  --background-hover: #FB8C00;
+  --background-activated: #FF9800;
+  --border-radius: 20px;
+}
+
+.toolbar-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+}
+
+ion-toolbar {
+  --background: #2E7D32;
+}

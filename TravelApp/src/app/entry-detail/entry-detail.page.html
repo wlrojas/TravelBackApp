@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/entries"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="/assets/img/logo.png" alt="Logo" class="logo-toolbar">
+      Mi recuerdo en detalles
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-wrapper">
+    <ion-card *ngIf="entry">
+      <ion-card-header>
+        <ion-card-title>{{ entry.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="photo-container" *ngIf="entry.photo">
+          <img [src]="entry.photo" alt="Foto de la entrada">
+        </div>
+        <p>{{ entry.content }}</p>
+        <p *ngIf="entry.location">¿Dónde fue?: {{ entry.location }}</p>
+        <ion-button expand="block" (click)="editEntry()">Editar mi recuerdo</ion-button>
+        <ion-button expand="block" color="danger" (click)="deleteEntry()">¡No quiero recordar esto!</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

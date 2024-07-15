@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/welcome"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="/assets/img/logo.png" alt="Logo" class="logo-toolbar">
+      Diario de mis recuerdos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-wrapper">
+    <ion-button expand="block" class="add-entry-button" (click)="goToAddEntry()">Añadir un recuerdo</ion-button>
+    <ion-button expand="block" class="random-memory-button" (click)="showRandomMemory()">Hazme recordar algo!</ion-button>
+    <div class="cards-background">
+      <ion-list class="custom-list" style="background: transparent;">
+        <ion-item *ngFor="let entry of entries" (click)="goToDetail(entry.id)" style="background: transparent;">
+          <ion-thumbnail slot="start" *ngIf="entry.photo">
+            <img [src]="entry.photo">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ entry.title }}</h2>
+            <p>{{ entry.content }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
